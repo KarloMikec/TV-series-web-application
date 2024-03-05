@@ -1,0 +1,22 @@
+<h2 class="pretraživanje">Moj profil</h2>
+<form id="registracijaForma" (ngSubmit)="azurirajProfil()">
+    <label for="mojProfil-ime">Ime:</label>
+    <input id="mojProfil-ime" type="text" ngModel [(ngModel)]="prijavljenKorisnik.ime" name="ime" /><br>
+    <label for="mojProfil-prezime">Prezime:</label>
+    <input id="mojProfil-prezime" type="text" ngModel [(ngModel)]="prijavljenKorisnik.prezime" name="prezime" /><br>
+    <label for="mojProfil-korime">Korisničko ime:</label>
+    <input id="mojProfil-korime" type="text" readonly disabled value="{{prijavljenKorisnik.korime}}" name="korime" /><br>
+    <label for="mojProfil-email">Email:</label>
+    <input id="mojProfil-email" type="email" ngModel [(ngModel)]="prijavljenKorisnik.email" name="email" /><br>
+    <label for="mojProfil-lozinka">Lozinka:</label>
+    <input id="mojProfil-lozinka" type="password" ngModel [(ngModel)]="prijavljenKorisnik.lozinka" name="lozinka" /><br>
+    <label for="mojProfil-drzava">Država:</label>
+    <input id="mojProfil-drzava" type="text" ngModel [(ngModel)]="prijavljenKorisnik.drzava" name="drzava" /><br>
+    <label for="mojProfil-grad">Grad:</label>
+    <input id="mojProfil-grad" type="text" ngModel [(ngModel)]="prijavljenKorisnik.grad" name="grad" /><br>
+    <label for="mojProfil-datum">Datum rođenja:</label>
+    <input id="mojProfil-datum" type="date" ngModel [(ngModel)]="prijavljenKorisnik.datum_rodjenja" name="datum" /><br>
+    <br>
+    <button id="btnSpremi" type="submit">Spremi</button>
+    <button id="btnOdustani" type="button" (click)="odustani()">Odustani</button>
+</form>

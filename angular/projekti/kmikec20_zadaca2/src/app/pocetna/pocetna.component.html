@@ -1,0 +1,25 @@
+<h2 class="pretraživanje">Pretraživanje serija</h2>
+<input type="text" placeholder="Ključna riječ" name="pretrazivanje" class="search" (keyup)="onSearchChange($event)" />
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Jezik</th>
+        <th>Naslov original</th>
+        <th>Naslov</th>
+        <th>Opis</th>
+        <th>Poster</th>
+        <th>Datum</th>
+        <th>Detalji</th>
+    </tr>
+    <tr *ngFor="let s of dohvaceneSerije">
+        <th>{{s.id}}</th>
+        <th>{{s.original_language}}</th>
+        <th>{{s.original_name}}</th>
+        <th>{{s.title}}</th>
+        <th>{{s.overview}}</th>
+        <th><img src="{{posterSerije + s.poster_path}}"></th>
+        <th>{{s.first_air_date}}</th>
+        <th><button type="button" (click)="prikaziDetalje(s.id)">Detalji</button></th>
+    </tr>
+</table>

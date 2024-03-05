@@ -1,0 +1,24 @@
+<h2 class="pretraživanje">Detalji serije</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Naziv</th>
+        <th>Opis</th>
+        <th>Broj sezone</th>
+        <th>Broj epizoda</th>
+        <th>Popularnost</th>
+        <th>Stranica</th>
+        <th>Poster</th>
+    </tr>
+    <tr>
+        <th>{{odabranaSerija?.id}}</th>
+        <th>{{odabranaSerija?.original_name}}</th>
+        <th>{{odabranaSerija?.overview}}</th>
+        <th>{{odabranaSerija?.number_of_seasons}}</th>
+        <th>{{odabranaSerija?.number_of_seasons}}</th>
+        <th>{{odabranaSerija?.popularity}}</th>
+        <th><a href="{{odabranaSerija?.homepage}}">{{odabranaSerija?.homepage}}</a></th>
+        <th><img src="{{posterSerije + odabranaSerija?.poster_path}}"></th>
+    </tr>
+</table>

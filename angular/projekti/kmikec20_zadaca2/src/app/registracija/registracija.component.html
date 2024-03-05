@@ -1,0 +1,26 @@
+<h2 class="pretraživanje">Registracija</h2>
+<form id="registracijaForma" (ngSubmit)="registracija()">
+    <label for="ime">Ime:</label>
+    <input name="ime" type="text" placeholder="Ime" id="ime" required [(ngModel)]="ime" /><br>
+    <label for="prezime">Prezime:</label>
+    <input name="prezime" type="text" placeholder="Prezime" id="prezime" required [(ngModel)]="prezime" /><br>
+    <label for="korime">Korisničko ime:</label>
+    <input name="korime" type="text" placeholder="Korisničko ime" id="korime" required [(ngModel)]="korime" /><br>
+    <label for="email">Email:</label>
+    <input name="email" type="email" placeholder="Email" id="email" required [(ngModel)]="email" /><br>
+    <label for="lozinka">Lozinka:</label>
+    <input name="lozinka" type="lozinka" placeholder="lozinka" id="lozinka" required [(ngModel)]="lozinka" /><br>
+    <label for="drzava">Država:</label>
+    <input name="drzava" type="text" placeholder="Država" id="drzava" [(ngModel)]="drzava" /><br>
+    <label for="grad">Grad:</label>
+    <input name="grad" type="text" placeholder="Grad" id="grad" [(ngModel)]="grad" /><br>
+    <label for="datum">Datum rođenja:</label>
+    <input name="datum" type="date" placeholder="Datum rođenja" id="datum" [(ngModel)]="datum" /><br>
+    <p>Već imaš račun?
+        <span>
+            <a routerLink="/prijava">Prijavi se</a>
+        </span>
+    </p>
+    <button type="submit">Registriraj se</button>
+    <button type="button" (click)="odustani()">Odustani</button>
+</form>

@@ -1,0 +1,20 @@
+<h2 id="prijavaNaslov">Prijava</h2>
+<form id="prijavaForma" (ngSubmit)="prijava()">
+    <label for="korime" class="label">Korisničko ime:</label>
+    <input name="korime" type="text" placeholder="Korisničko ime" id="korime" required [(ngModel)]="inputKorime" class="input"/><br>
+    <label for="lozinka" class="label">Lozinka:</label>
+    <input name="lozinka" type="password" placeholder="lozinka" id="lozinka" required [(ngModel)]="inputLozinka" class="input"/>
+    <div id="poruka" class="poruka">{{poruka}}</div>
+
+    <button type="submit"  id="prijavaBtn" class="button">Prijavi se</button>
+</form>
+
+<h2 id="podaciNaslov">Podaci za prijavu:</h2>
+<p class="tekst">Admin:<br>
+    Korisničko ime: admin<br>
+    Lozinka: rwa<br>
+</p>
+<p class="tekst">Korisnik:<br>
+    Korisničko ime: obican<br>
+    Lozinka: rwa<br>
+</p>

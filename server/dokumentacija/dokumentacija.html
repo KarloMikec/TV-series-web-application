@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dokumentacija</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/hendlanjeNavigacijom.js"></script>
+</head>
+
+<body>
+    <header>Dokumentacija</header>
+    <nav>#navigacija#</nav>
+    <main>
+        <img src="kmikec20.jpeg" alt="moja slika"><br>
+        <p>Ime i prezime: Karlo Mikec</p>
+        <p>Email adresa:
+            <a href="mailto:kmikec20@foi.hr">kmikec20@foi.hr</a>
+        </p>
+        <p>Slika ERA modela</p>
+        <img src="ERA Model.png" alt="Slika era modela" target="_blank"><br>
+
+        <h2>Tablica 2. pregled resursa, metoda i parametara REST servisa</h2>
+        <table border="1px">
+            <thead>
+                <th>Resurs<br>Parametri</th>
+                <th>Get<br>čitanje</th>
+                <th>POST<br>kreiranje</th>
+                <th>PUT<br>ažuriranje</th>
+                <th>DELETE<br>brisanje</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>baza/korisnici</td>
+                    <td>Implementirano</td>
+                    <td>Implementirano</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>baza/korisnici/{korime}</td>
+                    <td>Implementirano</td>
+                    <td>Implementirano</td>
+                    <td>Implementirano</td>
+                    <td>Implementirano</td>
+                </tr>
+                <tr>
+                    <td>baza/korisnici/{korime}/prijava</td>
+                    <td>Nije implemetirano s JWT tokenom </td>
+                    <td>Nije implemetirano s JWT tokenom</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>baza/favoriti</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>baza/favoriti/{id}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>baza/dnevnik <br>
+                        ?stranica=broj <br>
+                        &sortiraj=[d | m] <br>
+                        [&datumOd=datum] <br>
+                        [&datumDo=datum] <br>
+                        [&vrijemeOd=vrijeme] <br>
+                        [&vrijemeDo=vrijeme] <br></td>
+                    <td>Nije implementirano</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Tablica 3. pregled funkcionalnosti Web aplikacije</h2>
+        <table border="1px">
+            <thead>
+                <th>Uloga</th>
+                <th>Stranica</th>
+                <th>Opis</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Gost</td>
+                    <td>Početna</td>
+                    <td>Prikazuje tražilicu serija po nazivu. Na početku nema ničega već samo jedno
+                        tekstualno polje, tek kad se unese barem 3 znaka počinju se slati zahtjevi prema
+                        TMDB servisu.</td>
+                </tr>
+                <tr>
+                    <td>Gost / Korisnik</td>
+                    <td>SerijaDetalji</td>
+                    <td>Prikazuje detalje odabrane serije. Prikazuju se naziv (name), opis (overview), broj
+                        sezona, broj epizoda, popularnost, slika (poster_path), poveznica na vanjsku
+                        stranicu (homepage).</td>
+                </tr>
+                <tr>
+                    <td>Gost</td>
+                    <td>Dokumentacija</td>
+                    <td>Prikazuje stranicu dokumentacija.html opisanu ranije.</td>
+                </tr>
+                <tr>
+                    <td>Gost</td>
+                    <td>Prijava, Odjava</td>
+                    <td>Korisnik se može prijaviti ili odjaviti.</td>
+                </tr>
+                <tr>
+                    <td>Korisnik</td>
+                    <td>Profil</td>
+                    <td>Vidi svoje podatke (ime, prezime, korisničko ime, e-mail, …) i može ih ažurirati.
+                        Korisničko ime i e-mail se ne mogu ažurirati.</td>
+                </tr>
+                <tr>
+                    <td>Korisnik</td>
+                    <td>Favoriti</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Korisnik</td>
+                    <td>FavoritiDetalji</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Admin</td>
+                    <td>Registracija</td>
+                    <td>Gost se ne može samostalno registrirati kao novi korisnik već to radi admin. Kod
+                        dodavanja mora obavezno unjeti email, korisničko ime i lozinku. Opcionalno može
+                        unijeti ime, prezime i još barem 3 druga podatka po vlastitom odabiru. Korisnik
+                        admin mora biti unaprijed dodan u bazu. Kod registracije šalje se e-mail korisniku
+                        sa informacijom da je registrian i koje mu je korisničko ime i lozinka. Lozinka se u
+                        bazu ne smije spremati u čitljivom obliku i treba koristiti sol kod spremanja.</td>
+                </tr>
+                <tr>
+                    <td>Admin</td>
+                    <td>Korisnici</td>
+                    <td>Vidi podatke svih korisnika i može obrisati nekog korisnika, pri čemu se brišu svi
+                        njegovi favoriti. Glavni korisnik admin se ne može obrisati i to treba blokirati.</td>
+                </tr>
+                <tr>
+                    <td>Admin</td>
+                    <td>Dnevnik</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+<header>
+  <h1>Serije</h1>
+</header>
+<nav>
+  <a routerLink="/">Početna</a>
+  <a *ngIf="!korisnikService.prijavljen" routerLink="/prijava">Prijava</a>
+  <a *ngIf="korisnikService.tipKorisnika == 2" routerLink="/registracija">Registracija</a>
+  <a *ngIf="korisnikService.tipKorisnika == 2" routerLink="/korisnici">Korisnici</a>
+  <a *ngIf="korisnikService.prijavljen" routerLink="/profil">Profil</a>
+  <a routerLink="/dokumentacija">Dokumentacija</a>
+  <a *ngIf="korisnikService.prijavljen" (click)="Odjava()">Odjava</a>
+</nav>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer class="autor">Karlo Mikec &copy; 2023</footer>

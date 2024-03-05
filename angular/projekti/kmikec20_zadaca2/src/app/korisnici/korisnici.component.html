@@ -1,0 +1,29 @@
+<h2 class="pretraživanje">Popis svih korisnika</h2>
+
+<table border="1px">
+  <tr>
+    <th>Korime</th>
+    <th>Ime</th>
+    <th>Prezime</th>
+    <th>Email</th>
+    <th>Lozinka</th>
+    <th>Država</th>
+    <th>Grad</th>
+    <th>Datum Rođenja</th>
+    <th>Akcija</th>
+  </tr>
+  <tr *ngFor="let k of korisnici">
+    <td>{{k.korime}}</td>
+    <td>{{k.ime}}</td>
+    <td>{{k.prezime}}</td>
+    <td>{{k.email}}</td>
+    <td>{{k.lozinka}}</td>
+    <td>{{k.drzava}}</td>
+    <td>{{k.grad}}</td>
+    <td>{{k.datum_rodjenja}}</td>
+    <td>
+      <button type="button" (click)="obrisiKorisnika(k.korime)">Obriši</button>
+    </td>
+  </tr>
+
+</table>
